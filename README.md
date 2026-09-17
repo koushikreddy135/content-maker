@@ -185,12 +185,11 @@ In the React UI (`http://localhost:5173`), quick-launch presets demonstrate the 
 
 ### 1. Repository Setup & Environment
 ```bash
-git clone <repo-url>
-cd "yt project"
-cp .env.example .env
+git clone https://github.com/koushikreddy135/content-maker.git
+cd content-maker
 ```
 
-Configure your `.env` file:
+Create a `.env` file in the project root:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 DATABASE_URL=sqlite+aiosqlite:///./contentmaker.db

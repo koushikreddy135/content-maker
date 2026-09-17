@@ -1,16 +1,27 @@
-# Environment variables & secrets
+# ==========================================
+# 🔐 Environment Variables & Secrets
+# ==========================================
 .env
 .env.*
-!.env.example
+*.env
+*.secret
+*.key
+*.pem
 
-# Database
+# ==========================================
+# 🗄️ Databases & SQLite Storage
+# ==========================================
 *.db
 *.sqlite
 *.sqlite3
-contentforge.db
+*.db-shm
+*.db-wal
 contentmaker.db
+contentforge.db
 
-# Python
+# ==========================================
+# 🐍 Python Artifacts & Virtual Environments
+# ==========================================
 __pycache__/
 *.py[cod]
 *$py.class
@@ -46,30 +57,63 @@ coverage.xml
 *.cover
 *.log
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Virtual Environments
+.venv/
 venv/
 env/
 ENV/
 env.bak/
 venv.bak/
-.venv/
 
-# Node & Frontend
+# ==========================================
+# ⚡ Node.js, Frontend & Build Outputs
+# ==========================================
 node_modules/
+*/node_modules/
 frontend/node_modules/
 frontend/dist/
+dist/
+dist-ssr/
 .vite/
+frontend/.vite/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+*.tsbuildinfo
 
-# IDE & OS
-.vscode/
-.idea/
+# ==========================================
+# 💻 Operating System & IDE Configs
+# ==========================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+[Tt]humbs.db
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.sublime-workspace
+*.sublime-project
 *.swp
 *.swo
+*~
+*.bak
+
+# ==========================================
+# 📝 Scratch, Temp & Walkthrough Artifacts
+# ==========================================
+scratch/
+tmp/
+temp/
+*walkthrough*.md
